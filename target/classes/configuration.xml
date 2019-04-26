@@ -15,7 +15,7 @@
     <item name="tableNames" value="t_yq_act_activiti_approval" description="需要工具生成的表，逗号分隔"/>
     <item name="entityNames" value="ActivitiApproval" description="实体名，逗号分隔， 与上面的表名一一对应"/>
     <item name="entityDescs" value="房租审核" description="房租审核， 与上面的实体名一一对应"/>
-    <item name="baseDir" value="D:\myWorkSpace\mybatis-generator-master\successDir" description="文件存放的根目录"/>
+    <item name="baseDir" value="D:\myWorkSpace\successDir" description="文件存放的根目录"/>
   </category>
   
   <category name="entity" description="实体配置">

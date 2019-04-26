@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="java-generator:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/java_generator_jar</output-path>
+    <root id="archive" name="java-generator.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="java-generator" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../myRepository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../myRepository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../myRepository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../myRepository/org/postgresql/postgresql/42.2.5/postgresql-42.2.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../myRepository/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../myRepository/org/apache/logging/log4j/log4j-core/2.4.1/log4j-core-2.4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../myRepository/mysql/mysql-connector-java/5.1.36/mysql-connector-java-5.1.36.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../myRepository/org/codehaus/jackson/jackson-mapper-asl/1.9.11/jackson-mapper-asl-1.9.11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../myRepository/commons-io/commons-io/2.4/commons-io-2.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../myRepository/org/apache/logging/log4j/log4j-api/2.4.1/log4j-api-2.4.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

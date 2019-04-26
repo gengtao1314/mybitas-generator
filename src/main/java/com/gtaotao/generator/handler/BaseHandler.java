@@ -1,5 +1,8 @@
 package com.gtaotao.generator.handler;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +18,19 @@ public abstract class BaseHandler<T> {
     protected T info;
     
     private String generateFinalStr() {
-        String temp = FileHelper.readFileToString(this.getClass().getClassLoader().getResource("").getPath() + ftlName);
+        String temp = null;
+        try {
+            //   String temp = FileHelper.readFileToString(this.getClass().getClassLoader().getResource("/").getPath() + ftlName); //在打包成jar直接运行时，会报Null异常
+            InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(ftlName);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8")); // 实例化输入流，并获取网页代码
+            String s; // 依次循环，至到读的值为空
+            StringBuilder sb = new StringBuilder();
+            while ((s = reader.readLine()) != null) {
+                sb.append(s);
+            }
+            reader.close();
+            temp = sb.toString();
+        }catch (Exception e){}
         return FreeMarkerUtil.getProcessValue(param, temp);
     }
     

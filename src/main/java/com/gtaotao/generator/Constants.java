@@ -24,7 +24,11 @@ public class Constants {
 
     public static final String SERVICE_IMPL_SUFFIX = "ServiceImpl";
 
+    ///*在编译器中测试
     public static final String CONFIG_FILE_NAME = "configuration.xml";
+
+//    //打包成jar，在外部配置configuration.xml
+//    public static final String CONFIG_FILE_NAME = "../configuration.xml";
 
     public static final String PREFIX_JDBC = "jdbc";
 }
