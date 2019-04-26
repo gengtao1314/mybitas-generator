@@ -20,13 +20,14 @@ public abstract class BaseHandler<T> {
     private String generateFinalStr() {
         String temp = null;
         try {
-            //   String temp = FileHelper.readFileToString(this.getClass().getClassLoader().getResource("/").getPath() + ftlName); //在打包成jar直接运行时，会报Null异常
+            //   String temp = FileHelper.readFileToString(this.getClass().getClassLoader().getResource("").getPath() + ftlName); //在打包成jar直接运行时，会报Null异常
             InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(ftlName);
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8")); // 实例化输入流，并获取网页代码
             String s; // 依次循环，至到读的值为空
             StringBuilder sb = new StringBuilder();
             while ((s = reader.readLine()) != null) {
                 sb.append(s);
+                sb.append("\r\n");
             }
             reader.close();
             temp = sb.toString();
