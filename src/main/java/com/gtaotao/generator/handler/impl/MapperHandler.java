@@ -62,7 +62,7 @@ public class MapperHandler extends BaseHandler<MapperInfo> {
                 }
             }
 
-            selectSql.append("           <if test= ").append(propName).append(" != null\"> \r\n                ").append("AND ").append(columnName).append(" = {").append(propName).append("}\r\n")
+            selectSql.append("           <if test= \"").append(propName).append(" != null\"> \r\n                ").append("AND ").append(columnName).append(" = {").append(propName).append("}\r\n")
                     .append("           </if>\r\n");
 
         }
