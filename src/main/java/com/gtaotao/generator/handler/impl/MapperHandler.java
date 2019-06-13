@@ -48,7 +48,7 @@ public class MapperHandler extends BaseHandler<MapperInfo> {
                     insertIfColumns.append("                <if test=\"i.").append(propName).append(" != null and i.").append(propName).append(" != ''\">\r\n                   ").append(columnName).append(",\r\n")
                             .append("               </if>\r\n");
 
-                    insertIfProps.append("              <if test=\"i.").append(propName).append(" != null and i.").append(propName).append(" != ''\">\r\n                 ").append("{i.").append(propName).append("},\r\n")
+                    insertIfProps.append("              <if test=\"i.").append(propName).append(" != null and i.").append(propName).append(" != ''\">\r\n                 ").append("#{i.").append(propName).append("},\r\n")
                             .append("               </if>\r\n");
                 }else{
                     updateColProps.append("             <if test=\"").append(propName).append(" != null\">\r\n                   ").append(columnName).append(" = #{")
@@ -57,12 +57,12 @@ public class MapperHandler extends BaseHandler<MapperInfo> {
                     insertIfColumns.append("                <if test=\"i.").append(propName).append(" != null\"> \r\n                   ").append(columnName).append(",\r\n")
                             .append("               </if>\r\n");
 
-                    insertIfProps.append("              <if test=\"i.").append(propName).append(" != null\">\r\n                  ").append("{i.").append(propName).append("},\r\n")
+                    insertIfProps.append("              <if test=\"i.").append(propName).append(" != null\">\r\n                  ").append("#{i.").append(propName).append("},\r\n")
                             .append("               </if>\r\n");
                 }
             }
 
-            selectSql.append("           <if test= \"").append(propName).append(" != null\"> \r\n                ").append("AND ").append(columnName).append(" = {").append(propName).append("}\r\n")
+            selectSql.append("           <if test= \"").append(propName).append(" != null\"> \r\n                ").append("AND ").append(columnName).append(" = #{").append(propName).append("}\r\n")
                     .append("           </if>\r\n");
 
         }
